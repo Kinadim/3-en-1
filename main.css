@@ -1,0 +1,112 @@
+html{
+	margin: 0;
+	height: 100%;
+}
+
+body {
+    font-family: Verdana;
+
+}
+
+#container {
+    width: 32rem;
+    height: 21rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    border-radius: 20px;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+h2{
+  color: #d3d3d3;
+  text-align: center;
+}
+
+
+
+#style_boutton {
+  	border-radius: 20px;
+    font-family: Verdana;
+    animation: boutton_animation 3s infinite;
+    background-color: transparent;
+    color: #C0C0C0;
+    height: 6rem;
+    width: 15rem;
+    border-width: 4px;
+    margin: 0;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+}
+
+
+
+#style_boutton:hover {
+    animation: boutton_animation 2s ease infinite;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+    height:40%;
+    width:60%;
+    font-size: 100%;
+}
+
+
+
+@keyframes boutton_animation {
+    0% {border-color: red;}
+    25%{border-color:yellow;}
+		35%{border-color:orange;}
+    50%{border-color:green;}
+    75%{border-color:blue;}
+    100% {border-color: purple;}
+}
+
+
+
+html {
+  background: linear-gradient(to bottom right, #1B998B, #0D1317);
+}
+.black {
+     background: linear-gradient(to bottom right, #006BA6, #D81159);
+}
+.blue {
+     background: linear-gradient(to bottom right, #C81D25, #23395B);
+}
+.orange{
+     background: linear-gradient(to bottom right, #1B998B, #0D1317);
+}
+.black1 {
+     background: linear-gradient(to top left , #006BA6, #D81159);
+}
+.blue1 {
+     background: linear-gradient(to top left , #C81D25, #23395B);
+}
+.orange1 {
+     background: linear-gradient(to top left , #1B998B, #0D1317);
+}
+#target {
+	  height: 50px;
+	  width: 50px;
+  	color: #fff;
+  	border-radius: 50%;
+	  display: inline-block;
+	  text-shadow: #000 1px 1px 1px;
+	  cursor: pointer;
+	  border: none;
+	  position:absolute;
+	  bottom:0;
+	  right:0;
+	  transition: 0.5s;
+}
+#target:hover{
+	  height: 58px;
+	  width: 58px;
+}

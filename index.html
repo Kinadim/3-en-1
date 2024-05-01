@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<link rel="stylesheet" href="main.css">
+	<link rel="icon" type="image/ico" href="favicon.ico" />
+	<title>Bienvenue</title>
+	<meta charset="utf-8"/>
+	<script src="https://package.nsi.xyz/api/"></script>
+	<nsi-xyz add="menu" ref="0NSI 2020"></nsi-xyz>
+</head>
+<body>
+  <div id="container" class="orange1">
+  	<h2> CLIQUEZ SUR CE BOUTON POUR ACCÉDER À UN DE NOS SITES</h2>
+  	<button id="style_boutton"; type="button"; onclick ="openLink();"><h2>CLIQUEZ MOI</h2></button>
+  </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<button id="target" class="orange"></button>
+</body>
+
+<script>
+    var colors = [
+    'orange',
+    'blue',
+    'black'
+  ];
+    var colors1 = [
+    'orange1',
+    'blue1',
+    'black1'
+  ];
+    var currentColor = 0;
+    var currentColor1 = 0;
+    var target = jQuery('#target');
+    var target1 = jQuery('html');
+    var target2 = jQuery('#container');
+
+
+    target.click(function (evt) {
+      currentColor += 1;
+      currentColor1 += 1;
+      currentColor %= colors.length;
+      currentColor1 %= colors1.length;
+      target1.prop('class', colors[currentColor]);
+      target.prop('class', colors[currentColor]);
+      target2.prop('class', colors1[currentColor1]);
+
+    });
+</script>
+
+<script>
+  var links = new Array();
+  links[0] = "compte_a_rebours.html";
+  links[1] = "citation.html";
+  links[2] = "piano.html";
+
+  function openLink() {
+    var i = Math.floor(Math.random() * links.length);
+    parent.location = links[i];
+    return false;
+  }
+</script>
+
+</html>

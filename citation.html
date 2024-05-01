@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<body onload="nouveaux();">
+	<link rel="stylesheet" href="citation.css">
+	<body onload="nouveaux();">
+	<link rel="icon" type="image/ico" href="favicon.ico" />
+	<title>Citation</title>
+	<meta charset="utf-8"/>
+	<script src="https://package.nsi.xyz/api/"></script>
+	<nsi-xyz add="menu" ref="0NSI 2020"></nsi-xyz>
+<body>
+	<script>
+	var auteur = [
+		"Maitre Oogway",
+		"Maitre Oogway",
+		"Martin Luther King",
+		"Confucius",
+		"Jean-Paul Sartre",
+		"Victor Hugo",
+		"Albert Einstein",
+		"Oscar Wilde",
+		"Albert Einstein",
+		"Emmanuel Kant",
+		"Douglas Adams",
+		"Maitre Yoda"
+	]
+	var citations = [
+		"❝Hier est derrière, demain est mystère, et aujourd'hui est un cadeau, c'est pour cela qu'on l'appelle le présent.❞",
+		"❝On rencontre souvent sa destinée par les chemins qu'on a pris pour l'éviter.❞",
+		"❝Celui qui accepte le mal sans lutter contre lui coopère avec lui.❞",
+		"❝Exige beaucoup de toi-même et attends peu des autres. Ainsi beaucoup d'ennuis te seront épargnés.❞",
+		"❝Dans la vie on ne fait pas ce que l'on veut mais on est responsable de ce que l'on est.❞",
+		"❝On passe une moitié de sa vie à attendre ceux qu'on aimera et l'autre moitié à quitter ceux qu'on aime.❞",
+		"❝La vie, c'est comme une bicyclette, il faut avancer pour ne pas perdre l'équilibre.❞",
+		"❝La beauté est dans les yeux de celui qui regarde.❞",
+		"❝Un problème sans solution est un problème mal posé.❞",
+		"❝La musique est la langue des émotions.❞",
+		"❝42 est la réponse à la grande question sur la vie, l'univers et le reste❞",
+		"❝Difficile à voir. toujours en mouvement est l’avenir.❞"
+	]
+	function nouveaux() {
+		var rand = Math.floor(Math.random() * (citations.length));
+		document.getElementById('citationplace').innerHTML = citations[rand];
+		document.getElementById('auteurplace').innerHTML = auteur[rand];
+	}
+	</script>
+
+	<div class="container">
+		<div class="citation">
+			<div id="citationplace"></div>
+		</div>
+		<div class="auteur">
+			<div id="auteurplace"></div>
+		</div>
+	<button onclick="nouveaux()" >Nouvelle Citation</button>
+</div>
+</body>
+</html>
